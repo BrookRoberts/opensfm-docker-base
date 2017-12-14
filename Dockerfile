@@ -71,7 +71,7 @@ RUN \
     git clone https://github.com/paulinus/opengv.git && \
     cd /source/opengv && \
     mkdir -p build && cd build && \
-    cmake .. -DBUILD_TESTS=OFF -DBUILD_PYTHON=ON && \
+    cmake .. -DCMAKE_CXX_FLAGS="-std=c++11" -DBUILD_TESTS=OFF -DBUILD_PYTHON=ON && \
     make install && \
     cd / && \
     rm -rf /source/opengv
